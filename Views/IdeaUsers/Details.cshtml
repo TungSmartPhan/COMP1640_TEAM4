@@ -1,0 +1,42 @@
+﻿@model COMP1640_TEAM4.Models.IdeaUser
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>IdeaUser</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Comment.Description)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Comment.Description)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsThumbUp)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsThumbUp)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IsThumbDown)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IsThumbDown)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdeaId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
